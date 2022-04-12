@@ -1,0 +1,150 @@
+﻿@model IEnumerable<Poke.Models.Pokemon>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>Welcome Back Trainer!</h1>
+
+<p>
+    <h5><a asp-action="Create">Add a new Pokemon!</a></h5>
+</p>
+
+
+<style>
+
+body{
+background-color: rgb(143, 247, 167);
+}
+
+header.header{
+    background-color: rgb(238, 9, 49);
+}
+
+aside.sidebar{
+    background-color: rgb(238, 9, 49);
+}
+
+a.nav-item{
+    background-color: rgb(72, 171, 9);
+}
+
+</style>
+
+<div class="col-lg-8">
+          <div class="row">
+            <!-- Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Pokemons <span>| Stored</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <img src="~/assets/img/pb2.gif" width="50px" />
+                    </div>
+                    <div class="ps-3">
+                      <h6>145</h6>
+                      <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Card -->
+
+            <!-- Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Items <span>| All</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                     <img src="~/assets/img/bagM.png" width="50px" />
+                    </div>
+                    <div class="ps-3">
+                      <h6>160</h6>
+                      <span class="text-success small pt-1 fw-bold">+10</span> <span class="text-muted small pt-2 ps-1">today</span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Card -->
+
+          </div>
+        </div><!-- End Left side columns -->
+
+        <div class="row"> <!-- Row cards top image-->
+ <!-- Card with an image on top -->
+ <div class="col-md-4">
+          <div class="card">
+            <img src="~/assets/img/profOak.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card with an image on top</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    </div><!-- End Card with an image on top -->
+
+ <!-- Card with an image on top -->
+ <div class="col-md-4">
+          <div class="card">
+            <img src="~/assets/img/Oak1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Prof. Oak...</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    </div><!-- End Card with an image on top -->
+
+ <!-- Card with an image on top -->
+ <div class="col-md-4">
+          <div class="card">
+            <img src="~/assets/img/qualpoke.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Who's that pokemon?</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+    </div><!-- End Card with an image on top -->
+</div> <!-- End row cards -->
+
+
+<div class="row">
+   <div class="col-lg-6">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">With controls</h5>
+
+              <!-- Slides with controls -->
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="~/assets/img/pokeFireRed.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="~/assets/img/comofuncionaPokeBall.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="~/assets/img/dragon.gif" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+
+              </div><!-- End Slides with controls -->
+
+            </div>
+          </div>
+
+</div>
