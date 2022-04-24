@@ -12,11 +12,10 @@ namespace Poke.Models
         [Display(Name = "Name:")]
         public string Name { get; set; }
 
-        [Display(Name = "Age:")]
-        [MinLength(14)]
+        [Display(Name = "Age:")]       
         public int Age { get; set; }
 
-        [Display(Name = "Gender:")]
+        [Display(Name = "Gender: M/F")]
         [StringLength(2)]
         public string Gender { get; set; }
 
@@ -27,9 +26,13 @@ namespace Poke.Models
         public string Region { get; set; }
 
         [Display(Name = "Password")]
-        [Required(ErrorMessage = "Dear trainer, please insert your password.")]
+        [Required(ErrorMessage = "Dear trainer,\n please insert your password to keep your pokedex safe.")]
         [DataType(DataType.Password)]
-        public string Password { get; set; }   
+        [StringLength(9)]
+        public string Password { get; set; }
+
+        [Display(Name = "Profile Picture")]
+        public byte[]? Picture { get; set; }
 
     }
 
@@ -39,7 +42,7 @@ namespace Poke.Models
         [Display(Name = "ID:")]
         public Guid IdP { get; set; } 
 
-        [Display(Name = "Pókemon:")]
+        [Display(Name = "Pokémon:")]
         [Required]
         public string PokeN { get; set; }
 
@@ -55,10 +58,10 @@ namespace Poke.Models
         [Display(Name = "Ability 1:")]
         public string Ability { get; set; }
 
-        [Display(Name = "Picture")]
-        public byte[]? Picture { get; set; }
+        [Display(Name = "Pokemon Picture:")]
+        public byte[]? PictureP { get; set; }
 
-        [Display(Name = "HP:")]
+        [Display(Name = "Health Points:")]
         public double HP { get; set; }  
 
         [Display(Name = "Attack:")]
@@ -67,16 +70,16 @@ namespace Poke.Models
         [Display(Name = "Defence:")]
         public double Def { get; set; } 
 
-        [Display(Name = "Sp. Atk:")]
+        [Display(Name = "Sp.Atk:")]
         public double SpAtk { get; set; }
 
-        [Display(Name = "Sp. Def:")]
+        [Display(Name = "Sp.Def:")]
         public double SpDef { get; set; }
 
         [Display(Name = "Speed:")]
         public double Speed { get; set; }
 
-        [Display(Name = "Gender:")]
+        [Display(Name = "Gender: M/F")]
         [MaxLength(2)]
         public string GenderP { get; set; }
 

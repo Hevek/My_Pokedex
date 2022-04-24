@@ -15,6 +15,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\abrah\Desktop\Poke
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/abrah/Desktop/Poke/Views/Pokemon/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abrah/Desktop/Poke/Views/Pokemon/CreateP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vblxDcmVhdGVQLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abrah/Desktop/Poke/Views/Pokemon/DetailsTrainer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vblxEZXRhaWxzVHJhaW5lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/abrah/Desktop/Poke/Views/Pokemon/Home1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9rZW1vblxIb21lMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

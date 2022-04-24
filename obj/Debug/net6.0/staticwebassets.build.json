@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LarcKwo5Lc6R03//adlCAnP84+YV1XWtdIXFgjHTftk=",
+  "Hash": "E3FTrigkPDkTUtbyw2fM8SyiprpwHat2roLrXoXJzVY=",
   "Source": "Poke",
   "BasePath": "_content/Poke",
   "Mode": "Default",
@@ -289,6 +289,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\card.jpg"
     },
     {
+      "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\chap.png",
+      "SourceId": "Poke",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\",
+      "BasePath": "_content/Poke",
+      "RelativePath": "assets/img/chap.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\chap.png"
+    },
+    {
       "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\comofuncionaPokeBall.jpg",
       "SourceId": "Poke",
       "SourceType": "Discovered",
@@ -323,6 +340,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\dragon.gif"
     },
     {
+      "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\evyp.png",
+      "SourceId": "Poke",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\",
+      "BasePath": "_content/Poke",
+      "RelativePath": "assets/img/evyp.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\evyp.png"
+    },
+    {
       "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\favicon.png",
       "SourceId": "Poke",
       "SourceType": "Discovered",
@@ -338,6 +372,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\genp.png",
+      "SourceId": "Poke",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\",
+      "BasePath": "_content/Poke",
+      "RelativePath": "assets/img/genp.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\genp.png"
     },
     {
       "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\JOy.jpg",
@@ -663,6 +714,40 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\pikachu.gif"
     },
     {
+      "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\pkgr.png",
+      "SourceId": "Poke",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\",
+      "BasePath": "_content/Poke",
+      "RelativePath": "assets/img/pkgr.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\pkgr.png"
+    },
+    {
+      "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\pkwa.png",
+      "SourceId": "Poke",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\",
+      "BasePath": "_content/Poke",
+      "RelativePath": "assets/img/pkwa.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\pkwa.png"
+    },
+    {
       "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\pokeb.png",
       "SourceId": "Poke",
       "SourceType": "Discovered",
@@ -680,6 +765,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\pokeb.png"
     },
     {
+      "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\pokeb3.png",
+      "SourceId": "Poke",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\",
+      "BasePath": "_content/Poke",
+      "RelativePath": "assets/img/pokeb3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\pokeb3.png"
+    },
+    {
       "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\pokeball.gif",
       "SourceId": "Poke",
       "SourceType": "Discovered",
@@ -695,6 +797,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\pokeball.gif"
+    },
+    {
+      "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\pokef.png",
+      "SourceId": "Poke",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\",
+      "BasePath": "_content/Poke",
+      "RelativePath": "assets/img/pokef.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\pokef.png"
     },
     {
       "Identity": "C:\\Users\\abrah\\Desktop\\Poke\\wwwroot\\assets\\img\\pokeFireRed.jpg",

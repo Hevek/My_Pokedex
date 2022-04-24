@@ -1,0 +1,67 @@
+﻿@model Poke.Models.Trainer
+
+@{
+    ViewData["Title"] = "New Pokemon";
+}
+<h1>Register Now !</h1>
+<h3>Keep your pokedex safe</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hometown" class="control-label"></label>
+                <input asp-for="Hometown" class="form-control" />
+                <span asp-validation-for="Hometown" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Region" class="control-label"></label>
+                <input asp-for="Region" class="form-control" />
+                <span asp-validation-for="Region" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Picture" class="control-label"></label>
+                <input type="file" name="Pic" id="Pic" class="form-control" />
+                <span asp-validation-for="Picture" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:15px">
+                <input type="submit" value="Enter" class="btn btn-success rounded-pill btn-sm"/>
+                <a class="btn btn-secondary rounded-pill btn-sm" asp-action="Home1">Back</a>
+            </div>
+        </form>
+    </div>
+    <style>
+
+header.header{
+    background-color: rgb(238, 9, 49);
+}
+ h1, h6, a, input, label, h3
+{
+    font-family: PoKeSolid;
+    color: rgb(19, 17, 18);
+}
+
+</style>
+
+</div>
