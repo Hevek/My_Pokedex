@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Poke.Models.Pokemon>
+﻿@model IEnumerable<Poke.Models.PokeM>
 
 @{
     ViewData["Title"] = "Home";
@@ -94,75 +94,36 @@ a.nav-item{
     </div><!-- End Card with an image on top -->
 
  <!-- Card with an image on top -->
- <div class="col-md-4">
-          <div class="card">
+ <div class="col-md-4">            
+                    @foreach(var item in Model)
+                    {
+              <div class="card">
             <!-- img src="~/assets/img/pkgr.png" class="card-img-top" alt="..." --> height="350px" width="350px" 
             <div class="card-body">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.PictureP)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.PokeN)
-                            </th>
-                            <@Html.DisplayNameFor(model => model.TypeP)
-                        </tr>
-                        <th class="text-center"> Actions </th>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                 <tr class="align-middle">
-                 <td>
-                    @{
-                        try
+                
+                        @try
                         {
                             var base64 = Convert.ToBase64String(@item.PictureP);
                             if(!string.IsNullOrEmpty(base64))
                             {
                                 var img = String.Format("data:image/png;base64,{0}", base64);
-                                <img class="img-fluid" src="@img" width="100" />
+                                <img class="img-fluid" src="@img"  height="350px" width="350px" />
                             }
                         }
                         catch
                         {
                             <img class="img-fluid" src="http://www.puspfc.usp.br/sistemas/prefeitura/imgs/sem_foto.png" width="100" />
                         }
-                    }
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PictureP)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PokeN)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TypeP)
-                </td>
-                <td class="text-center">
-                    <!-- <a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@item.IdP"> Edit</a> -->
-                    <a class="btn btn-outline-secondary btn-sm" asp-action="DetailsPokemon" asp-route-id="@item.IdP">Details</a>
-                    <!-- <a class="btn btn-outline-danger btn-sm" asp-action="Delete" asp-route-id="@item.IdP"> Delete</a> -->
-                </td>
-                </tr>
-                        }
-                    </tbody>
-
-                </table>
-
+                    
                
-
-
-
-
-
-
-
-
-            </div>
+                        <h5>Name: @item.</h5>
+               
+                    <a  asp-action="DetailsPokemon" asp-route-id="@item.IdP">Details</a>
+                    
+                 </div>
           </div>
+                       }
+                       
     </div><!-- End Card with an image on top -->
 
  <!-- Card with an image on top -->

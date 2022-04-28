@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Poke.Migrations
 {
-    public partial class tablePokeadded : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Pokémons",
+                name: "PokesM",
                 columns: table => new
                 {
                     IdP = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -19,7 +19,7 @@ namespace Poke.Migrations
                     Height = table.Column<double>(type: "float", nullable: false),
                     Weight = table.Column<double>(type: "float", nullable: false),
                     Ability = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Picture = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    PictureP = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     HP = table.Column<double>(type: "float", nullable: false),
                     Atk = table.Column<double>(type: "float", nullable: false),
                     Def = table.Column<double>(type: "float", nullable: false),
@@ -30,14 +30,35 @@ namespace Poke.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pokémons", x => x.IdP);
+                    table.PrimaryKey("PK_PokesM", x => x.IdP);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TrainersM",
+                columns: table => new
+                {
+                    IdT = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Age = table.Column<int>(type: "int", nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(2)", maxLength: 2, nullable: false),
+                    Hometown = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Region = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(9)", maxLength: 9, nullable: false),
+                    Picture = table.Column<byte[]>(type: "varbinary(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TrainersM", x => x.IdT);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Pokémons");
+                name: "PokesM");
+
+            migrationBuilder.DropTable(
+                name: "TrainersM");
         }
     }
 }

@@ -12,9 +12,10 @@ namespace Poke.Controllers
             _appContext = appContext;
         }
 
-        public IActionResult Home1()
+        public async Task<IActionResult> Home1()
         {
-            return View();
+            var trainers = await _appContext.PokesM.ToListAsync();
+            return View(trainers);
         }
 
         public IActionResult Index()
@@ -29,7 +30,7 @@ namespace Poke.Controllers
         }
 
         [HttpPost, ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create (Trainer trainer, IList<IFormFile> Img)
+        public async Task<IActionResult> Create (TrainerM trainer, IList<IFormFile> Img)
         {
             //Verificar tamanho da imagem
             IFormFile uploadedImage = Img.FirstOrDefault();
@@ -39,7 +40,7 @@ namespace Poke.Controllers
                 uploadedImage.OpenReadStream().CopyTo(ms);
                 trainer.Picture = ms.ToArray();
             }
-            _appContext.Trainers.Add(trainer);
+            _appContext.TrainersM.Add(trainer);
            await _appContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
@@ -51,7 +52,7 @@ namespace Poke.Controllers
         }
 
         [HttpPost, ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateP (Pokemon pokemon, IList<IFormFile> ImgP)
+        public async Task<IActionResult> CreateP (PokeM pokemon, IList<IFormFile> ImgP)
         {
             IFormFile uploadedImage = ImgP.FirstOrDefault();
             MemoryStream ms = new MemoryStream();
@@ -60,7 +61,7 @@ namespace Poke.Controllers
                 uploadedImage.OpenReadStream().CopyTo(ms);
                 pokemon.PictureP = ms.ToArray();
             }
-            _appContext.Pokemons.Add(pokemon);
+            _appContext.PokesM.Add(pokemon);
            await _appContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
@@ -73,7 +74,7 @@ namespace Poke.Controllers
                 return NotFound();
             }
 
-            var trainers = await _appContext.Trainers.FindAsync(id);
+            var trainers = await _appContext.TrainersM.FindAsync(id);
 
             if(trainers == null)
             {
@@ -92,7 +93,7 @@ namespace Poke.Controllers
                 return NotFound();
             }
 
-            var poke = await _appContext.Pokemons.FindAsync(id);
+            var poke = await _appContext.PokesM.FindAsync(id);
 
             if (poke == null)
             {
@@ -109,7 +110,7 @@ namespace Poke.Controllers
                 return NotFound();
             }
 
-            var trainers = await _appContext.Trainers.FindAsync(id);
+            var trainers = await _appContext.TrainersM.FindAsync(id);
 
             if (trainers == null)
             {
@@ -121,14 +122,14 @@ namespace Poke.Controllers
         }
         
         [HttpPost, ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditTrainers(Guid? id, Trainer trainer, IList<IFormFile> Img)
+        public async Task<IActionResult> EditTrainers(Guid? id, TrainerM trainer, IList<IFormFile> Img)
         {
             if(id == null)
             {
                 return NotFound();
             }
 
-            var Olddata = _appContext.Trainers.AsNoTracking().FirstOrDefault(t => t.IdT == id);
+            var Olddata = _appContext.TrainersM.AsNoTracking().FirstOrDefault(t => t.IdT == id);
 
             IFormFile uploadedImage = Img.FirstOrDefault();
             MemoryStream ms = new MemoryStream();
@@ -158,7 +159,7 @@ namespace Poke.Controllers
                 return NotFound();
             }
 
-            var poke = await _appContext.Pokemons.FindAsync(id);
+            var poke = await _appContext.PokesM.FindAsync(id);
 
             if (poke == null)
             {
@@ -170,14 +171,14 @@ namespace Poke.Controllers
         }
 
         [HttpPost, ValidateAntiForgeryToken]
-        public async Task<IActionResult> EditPokemon(Guid? id, Pokemon pokemon, IList<IFormFile> ImgP)
+        public async Task<IActionResult> EditPokemon(Guid? id, PokeM pokemon, IList<IFormFile> ImgP)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var OlddataP = _appContext.Pokemons.AsNoTracking().FirstOrDefault(p => p.IdP == id);
+            var OlddataP = _appContext.PokesM.AsNoTracking().FirstOrDefault(p => p.IdP == id);
 
             IFormFile uploadedImage = ImgP.FirstOrDefault();
             MemoryStream ms = new MemoryStream();
@@ -207,7 +208,7 @@ namespace Poke.Controllers
                 return NotFound();
             }
 
-            var trainerD = await _appContext.Trainers.FindAsync(id);
+            var trainerD = await _appContext.TrainersM.FindAsync(id);
             if (trainerD == null)
             {
                 return BadRequest();
@@ -220,8 +221,8 @@ namespace Poke.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmedT(Guid? id)
         {
-            var trainerDel = await _appContext.Trainers.FindAsync(id);
-            _appContext.Trainers.Remove(trainerDel);
+            var trainerDel = await _appContext.TrainersM.FindAsync(id);
+            _appContext.TrainersM.Remove(trainerDel);
             await _appContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
@@ -234,7 +235,7 @@ namespace Poke.Controllers
                 return NotFound();
             }
 
-            var pokemonD = await _appContext.Pokemons.FindAsync(id);
+            var pokemonD = await _appContext.PokesM.FindAsync(id);
             if(pokemonD == null)
             {
                 return BadRequest();
@@ -245,8 +246,8 @@ namespace Poke.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmedP(Guid? id)
         {
-            var pokemonDel = await _appContext.Pokemons.FindAsync(id);
-            _appContext.Pokemons.Remove(pokemonDel);
+            var pokemonDel = await _appContext.PokesM.FindAsync(id);
+            _appContext.PokesM.Remove(pokemonDel);
             await _appContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }

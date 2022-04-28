@@ -31,3 +31,4 @@ feito.
 terminar de criar as views
 depois arrumar o problema de redirecionar por id
 e arrumar os cards
+14:07 28/04/2022

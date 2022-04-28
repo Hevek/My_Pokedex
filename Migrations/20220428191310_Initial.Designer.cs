@@ -13,8 +13,8 @@ using AppContext = Poke.Data.AppContext;
 namespace Poke.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220406174345_tablePokeadded")]
-    partial class tablePokeadded
+    [Migration("20220428191310_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,7 +25,7 @@ namespace Poke.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Poke.Models.Pokémon", b =>
+            modelBuilder.Entity("Poke.Models.PokeM", b =>
                 {
                     b.Property<Guid>("IdP")
                         .ValueGeneratedOnAdd()
@@ -52,7 +52,7 @@ namespace Poke.Migrations
                     b.Property<double>("Height")
                         .HasColumnType("float");
 
-                    b.Property<byte[]>("Picture")
+                    b.Property<byte[]>("PictureP")
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("PokeN")
@@ -77,10 +77,10 @@ namespace Poke.Migrations
 
                     b.HasKey("IdP");
 
-                    b.ToTable("Pokémons");
+                    b.ToTable("PokesM");
                 });
 
-            modelBuilder.Entity("Poke.Models.Trainer", b =>
+            modelBuilder.Entity("Poke.Models.TrainerM", b =>
                 {
                     b.Property<Guid>("IdT")
                         .ValueGeneratedOnAdd()
@@ -104,7 +104,11 @@ namespace Poke.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(9)
+                        .HasColumnType("nvarchar(9)");
+
+                    b.Property<byte[]>("Picture")
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Region")
                         .IsRequired()
@@ -112,7 +116,7 @@ namespace Poke.Migrations
 
                     b.HasKey("IdT");
 
-                    b.ToTable("Trainers");
+                    b.ToTable("TrainersM");
                 });
 #pragma warning restore 612, 618
         }
