@@ -40,7 +40,7 @@ namespace Poke.Controllers
                 trainer.Picture = ms.ToArray();
             }
             _appContext.Trainers.Add(trainer);
-            _appContext.SaveChanges();
+           await _appContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
@@ -51,7 +51,7 @@ namespace Poke.Controllers
         }
 
         [HttpPost, ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateP (Pokemon pokemon, IList<FormFile> ImgP)
+        public async Task<IActionResult> CreateP (Pokemon pokemon, IList<IFormFile> ImgP)
         {
             IFormFile uploadedImage = ImgP.FirstOrDefault();
             MemoryStream ms = new MemoryStream();
@@ -61,7 +61,7 @@ namespace Poke.Controllers
                 pokemon.PictureP = ms.ToArray();
             }
             _appContext.Pokemons.Add(pokemon);
-            _appContext.SaveChanges();
+           await _appContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
@@ -73,7 +73,7 @@ namespace Poke.Controllers
                 return NotFound();
             }
 
-            var trainers = await _appContext.Trainers.FirstOrDefaultAsync(t => t.IdT == id);
+            var trainers = await _appContext.Trainers.FindAsync(id);
 
             if(trainers == null)
             {
@@ -92,7 +92,7 @@ namespace Poke.Controllers
                 return NotFound();
             }
 
-            var poke = await _appContext.Pokemons.FirstOrDefaultAsync(p => p.IdP == id);
+            var poke = await _appContext.Pokemons.FindAsync(id);
 
             if (poke == null)
             {

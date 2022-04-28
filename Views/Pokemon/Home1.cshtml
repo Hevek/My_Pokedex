@@ -5,11 +5,11 @@
 }
 
 <h1>Welcome Back Trainer!</h1>
-
 <p>
     <h5><a asp-action="CreateP">Add a new Pokemon !</a></h5>
     <h5><a asp-action="Create">Register your ID !</a></h5>
 </p>
+
 
 
 <style>
@@ -96,10 +96,71 @@ a.nav-item{
  <!-- Card with an image on top -->
  <div class="col-md-4">
           <div class="card">
-            <img src="~/assets/img/pkgr.png" class="card-img-top" alt="..." height="350px" width="350px">
+            <!-- img src="~/assets/img/pkgr.png" class="card-img-top" alt="..." --> height="350px" width="350px" 
             <div class="card-body">
-              <h5 class="card-title">Prof. Oak...</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PictureP)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PokeN)
+                            </th>
+                            <@Html.DisplayNameFor(model => model.TypeP)
+                        </tr>
+                        <th class="text-center"> Actions </th>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                 <tr class="align-middle">
+                 <td>
+                    @{
+                        try
+                        {
+                            var base64 = Convert.ToBase64String(@item.PictureP);
+                            if(!string.IsNullOrEmpty(base64))
+                            {
+                                var img = String.Format("data:image/png;base64,{0}", base64);
+                                <img class="img-fluid" src="@img" width="100" />
+                            }
+                        }
+                        catch
+                        {
+                            <img class="img-fluid" src="http://www.puspfc.usp.br/sistemas/prefeitura/imgs/sem_foto.png" width="100" />
+                        }
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PictureP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PokeN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeP)
+                </td>
+                <td class="text-center">
+                    <!-- <a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@item.IdP"> Edit</a> -->
+                    <a class="btn btn-outline-secondary btn-sm" asp-action="DetailsPokemon" asp-route-id="@item.IdP">Details</a>
+                    <!-- <a class="btn btn-outline-danger btn-sm" asp-action="Delete" asp-route-id="@item.IdP"> Delete</a> -->
+                </td>
+                </tr>
+                        }
+                    </tbody>
+
+                </table>
+
+               
+
+
+
+
+
+
+
+
             </div>
           </div>
     </div><!-- End Card with an image on top -->
@@ -109,8 +170,13 @@ a.nav-item{
           <div class="card">
             <img src="~/assets/img/pokef.png" class="card-img-top" alt="..." height="350px" width="350px">
             <div class="card-body">
-              <h5 class="card-title">Who's that pokemon?</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+             
+
+
+
+
+
+
             </div>
           </div>
     </div><!-- End Card with an image on top -->
@@ -125,8 +191,13 @@ a.nav-item{
           <div class="card">
             <img src="~/assets/img/evyp.png" class="card-img-top" alt="..." height="350px" width="350px">
             <div class="card-body">
-              <h5 class="card-title">Card with an image on top</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              
+
+
+
+
+
+
             </div>
           </div>
     </div><!-- End Card with an image on top -->
@@ -136,8 +207,12 @@ a.nav-item{
           <div class="card">
             <img src="~/assets/img/chap.png" class="card-img-top" alt="..." height="350px" width="350px">
             <div class="card-body">
-              <h5 class="card-title">Prof. Oak...</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              
+
+
+
+
+
             </div>
           </div>
     </div><!-- End Card with an image on top -->
@@ -147,8 +222,12 @@ a.nav-item{
           <div class="card">
             <img src="~/assets/img/genp.png" class="card-img-top" alt="..." height="350px" width="350px">
             <div class="card-body">
-              <h5 class="card-title">Who's that pokemon?</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              
+
+
+
+
+
             </div>
           </div>
     </div><!-- End Card with an image on top -->

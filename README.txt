@@ -26,3 +26,8 @@ Colocar fonte ddo pokemon na tela de carregamento, tirar a barra de
 15:31 10/04/2022
 feito.
 15:31 10/04/2022
+
+01:10 28/04/2022
+terminar de criar as views
+depois arrumar o problema de redirecionar por id
+e arrumar os cards
