@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\abraham\\pokedex\\My_Pokedex\\Poke.csproj": {}
+    "C:\\Users\\abrah\\Desktop\\pokeClone\\My_Pokedex\\Poke.csproj": {}
   },
   "projects": {
-    "C:\\abraham\\pokedex\\My_Pokedex\\Poke.csproj": {
+    "C:\\Users\\abrah\\Desktop\\pokeClone\\My_Pokedex\\Poke.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\abraham\\pokedex\\My_Pokedex\\Poke.csproj",
+        "projectUniqueName": "C:\\Users\\abrah\\Desktop\\pokeClone\\My_Pokedex\\Poke.csproj",
         "projectName": "Poke",
-        "projectPath": "C:\\abraham\\pokedex\\My_Pokedex\\Poke.csproj",
-        "packagesPath": "C:\\Users\\aluno2T1BT\\.nuget\\packages\\",
-        "outputPath": "C:\\abraham\\pokedex\\My_Pokedex\\obj\\",
+        "projectPath": "C:\\Users\\abrah\\Desktop\\pokeClone\\My_Pokedex\\Poke.csproj",
+        "packagesPath": "C:\\Users\\abrah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\abrah\\Desktop\\pokeClone\\My_Pokedex\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aluno2T1BT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\abrah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

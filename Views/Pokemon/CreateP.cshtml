@@ -5,81 +5,73 @@
 }
 <h1>Register your Pokémon !</h1>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="CreateP" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="PokeN" class="control-label"></label>
-                <input asp-for="PokeN" class="form-control" />
-                <span asp-validation-for="PokeN" class="text-danger"></span>
+<div class="card">
+            <div class="card-body">
+              <h5 class="card-title"> Gotta Catch Em' All ! </h5>
+              <!-- No Labels Form -->
+              <form class="row g-3" asp-action="CreateP" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                  <div class="col-md-6">
+                  <input asp-for="PokeN" class="form-control" placeholder="Pokémon Name">
+                  <span asp-validation-for="PokeN" class="text-danger"></span>
+              </div>
+                <div class="col-md-3">
+                  <input asp-for="TypeP" type="text" class="form-control" placeholder="Pokémon Type">
+                   <span asp-validation-for="TypeP" class="text-danger"></span>  
+              </div>
+                <div class="col-md-2">
+                  <input asp-for="Height" type="text" class="form-control" placeholder="Height">
+                   <span asp-validation-for="Height" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                  <input asp-for="Weight" type="text" class="form-control" placeholder="Weight">
+                   <span asp-validation-for="Weight" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                  <input asp-for="Ability" type="text" class="form-control" placeholder="Ability">
+                   <span asp-validation-for="Ability" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                  <input asp-for="HP" type="text" class="form-control" placeholder="Health Points">
+                   <span asp-validation-for="HP" class="text-danger"></span>
+                </div>
+                <div class="col-2">
+                  <input asp-for="Atk" type="text" class="form-control" placeholder="Atk">
+                   <span asp-validation-for="Atk" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                  <input asp-for="Def" type="text" class="form-control" placeholder="Def">
+                   <span asp-validation-for="Def" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                  <input asp-for="SpAtk" type="text" class="form-control" placeholder="Speed Atk">
+                  <span asp-validation-for="SpAtk" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                  <input asp-for="SpDef" type="text" class="form-control" placeholder="Speed Def">
+                   <span asp-validation-for="SpDef" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                  <input asp-for="Speed" type="text" class="form-control" placeholder="Speed">
+                   <span asp-validation-for="Speed" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                  <input asp-for="GenderP" type="text" maxlength="1" class="form-control" placeholder="Gender: M/F">
+                   <span asp-validation-for="GenderP" class="text-danger"></span>
+                </div>                
+                <div class="col-md-5">
+                  <input asp-for="PictureP" type="file" name="ImgP" id="ImgP" class="form-control">
+                  <span asp-validation-for="PictureP" class="text-danger"></span>
+                </div>
+                <div class="text-center">
+                  <input type="submit" value="Submit" class="btn btn-success"/> 
+                  <input type="reset"  class="btn btn-primary" />
+                  <a class="btn btn-secondary" asp-action="Home1">Back</a>
+                </div>
+              </form><!-- End No Labels Form -->
+
             </div>
-            <div class="form-group">
-                <label asp-for="TypeP" class="control-label"></label>
-                <input asp-for="TypeP" class="form-control" />
-                <span asp-validation-for="TypeP" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Height" class="control-label"></label>
-                <input asp-for="Height" class="form-control" />
-                <span asp-validation-for="Height" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Weight" class="control-label"></label>
-                <input asp-for="Weight" class="form-control" />
-                <span asp-validation-for="Weight" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Ability" class="control-label"></label>
-                <input asp-for="Ability" class="form-control" />
-                <span asp-validation-for="Ability" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HP" class="control-label"></label>
-                <input asp-for="HP" class="form-control" />
-                <span asp-validation-for="HP" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Atk" class="control-label"></label>
-                <input asp-for="Atk" class="form-control" />
-                <span asp-validation-for="Atk" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Def" class="control-label"></label>
-                <input asp-for="Def" class="form-control" />
-                <span asp-validation-for="Def" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SpAtk" class="control-label"></label>
-                <input asp-for="SpAtk" class="form-control" />
-                <span asp-validation-for="SpAtk" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SpDef" class="control-label"></label>
-                <input asp-for="SpDef" class="form-control" />
-                <span asp-validation-for="SpDef" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Speed" class="control-label"></label>
-                <input asp-for="Speed" class="form-control" />
-                <span asp-validation-for="Speed" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="GenderP" class="control-label"></label>
-                <input asp-for="GenderP" class="form-control" />
-                <span asp-validation-for="GenderP" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PictureP" class="control-label"></label>
-                <input type="file" name="ImgP" id="ImgP" class="form-control" />
-                <span asp-validation-for="PictureP" class="text-danger"></span>
-            </div>
-            <div class="form-group" style="margin-top:15px">
-                <input type="submit" value="Enter" class="btn btn-success rounded-pill btn-sm"/>
-                <a class="btn btn-secondary rounded-pill btn-sm" asp-action="Home1">Back</a>
-            </div>
-        </form>
-    </div>
+          </div>
     <style>
 
 header.header{

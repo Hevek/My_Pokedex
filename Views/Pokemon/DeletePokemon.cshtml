@@ -1,12 +1,12 @@
 ﻿    @model Poke.Models.PokeM
 @{
-    ViewData["Title"] = "DetailsPokemon";
+    ViewData["Title"] = "Delete Pokemon";
 }
-<h1> ID Details Pokemon</h1>
+<h1> Delete Pokemon</h1>
 <hr />
 <div class="card">
     <div class="card-body">
-        <form class="row g-3" asp-action="CreateP" enctype="multipart/form-data">
+        <div class="row g-3" >
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="col-md-4">
                 <label asp-for="PokeN" class="control-label"></label>
@@ -90,10 +90,17 @@
                             }
                         }
             </div>
-            <div class="form-group" style="margin-top:15px">
-                <button type="button"  class="btn btn-info"><a class="bi bi-arrow-left-circle-fill" asp-action="Home1">  Back</a></button>
-            </div>
-        </form>
+            <form asp-action="Delete"  style="margin-top:15px">
+                <input type="hidden" asp-for="IdP" />
+               <input type="submit"  class="btn btn-danger" value="Delete" style="color: black;"/>
+               <button type="button"  class="btn btn-info"><a class="bi bi-arrow-left-circle-fill" asp-action="Home1">  Back</a></button>
+            </form>
+@*
+             <input type="submit" value="Submit" class="btn btn-success" />
+                  <input type="reset"  class="btn btn-primary" />
+                  <a class="btn btn-secondary" asp-action="Home1">Back</a>*@
+
+        </div>
     </div>
     <style>
 

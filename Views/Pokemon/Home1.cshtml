@@ -30,6 +30,11 @@ a.nav-item{
     background-color: rgb(72, 171, 9);
 }
 
+h5{
+    font-family: PoKeSolid;
+    color: black;
+}
+
 </style>
 
 <div class="col-lg-8">
@@ -79,26 +84,14 @@ a.nav-item{
 
 
 
-<!-- Row cards top image-->
-<div class="row">
-    
- <!-- Card with an image on top -->
- <div class="col-md-4">
-          <div class="card">
-            <img src="~/assets/img/pkwa.png" class="card-img-top" alt="..." height="350px" width="350px">
-            <div class="card-body">
-              <h5 class="card-title">Card with an image on top</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
-    </div><!-- End Card with an image on top -->
-
- <!-- Card with an image on top -->
- <div class="col-md-4">            
+<!-- Row cards top image-->  
+<div class="row d-flex" height="350px" width="350px">
                     @foreach(var item in Model)
                     {
-              <div class="card">
-            <!-- img src="~/assets/img/pkgr.png" class="card-img-top" alt="..." --> height="350px" width="350px" 
+
+    <div class="col-md-3" height="350px" width="350px">
+        <div class="card">
+            <!-- img src="~/assets/img/pkgr.png" class="card-img-top" alt="..." --> 
             <div class="card-body">
                 
                         @try
@@ -107,90 +100,22 @@ a.nav-item{
                             if(!string.IsNullOrEmpty(base64))
                             {
                                 var img = String.Format("data:image/png;base64,{0}", base64);
-                                <img class="img-fluid" src="@img"  height="350px" width="350px" />
+                                <img class="img-fluid" src="@img" style="max-width: 100%;" />
                             }
+                          
                         }
                         catch
                         {
                             <img class="img-fluid" src="http://www.puspfc.usp.br/sistemas/prefeitura/imgs/sem_foto.png" width="100" />
                         }
+                               <h5> Name: @item.PokeN </h5>                                                           
+                    <button type="button" class="btn btn-info"><a  asp-action="DetailsPokemon" asp-route-id="@item.IdP" class="bi bi-info-circle"> Details</a></button>
+                    <button type="button" class="btn btn-danger"><a asp-action="DeletePokemon" asp-route-id="@item.IdP" class="bi bi-exclamation-octagon"> Delete</a></button>
+                    <button type="button" class="btn btn-warning" style="margin-top: 10px"><a asp-action="EditPokemon" asp-route-id="@item.IdP" class="bi bi-exclamation-triangle"> Edit</a></button>
                     
-               
-                        <h5>Name: @item.</h5>
-               
-                    <a  asp-action="DetailsPokemon" asp-route-id="@item.IdP">Details</a>
-                    
-                 </div>
-          </div>
+            </div>
+        </div>
+    </div>
+
                        }
-                       
-    </div><!-- End Card with an image on top -->
-
- <!-- Card with an image on top -->
- <div class="col-md-4">
-          <div class="card">
-            <img src="~/assets/img/pokef.png" class="card-img-top" alt="..." height="350px" width="350px">
-            <div class="card-body">
-             
-
-
-
-
-
-
-            </div>
-          </div>
-    </div><!-- End Card with an image on top -->
-</div> <!-- End row cards -->
-
-
-
-
- <div class="row"> <!-- Row cards top image-->
- <!-- Card with an image on top -->
- <div class="col-md-4">
-          <div class="card">
-            <img src="~/assets/img/evyp.png" class="card-img-top" alt="..." height="350px" width="350px">
-            <div class="card-body">
-              
-
-
-
-
-
-
-            </div>
-          </div>
-    </div><!-- End Card with an image on top -->
-
- <!-- Card with an image on top -->
- <div class="col-md-4">
-          <div class="card">
-            <img src="~/assets/img/chap.png" class="card-img-top" alt="..." height="350px" width="350px">
-            <div class="card-body">
-              
-
-
-
-
-
-            </div>
-          </div>
-    </div><!-- End Card with an image on top -->
-
- <!-- Card with an image on top -->
- <div class="col-md-4">
-          <div class="card">
-            <img src="~/assets/img/genp.png" class="card-img-top" alt="..." height="350px" width="350px">
-            <div class="card-body">
-              
-
-
-
-
-
-            </div>
-          </div>
-    </div><!-- End Card with an image on top -->
-</div> <!-- End row cards -->
-
+                       </div>
